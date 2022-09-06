@@ -3,7 +3,7 @@ class ReservationsController < ApplicationController
         Reservation.all.to_json
       end
     
-      get "/reservations/:id" do
+    get "/reservations/:id" do
         find_reservation
     
         if @reservation
@@ -13,7 +13,7 @@ class ReservationsController < ApplicationController
         end
       end
 
-      post "/reservations" do
+    post "/reservations" do
         reservation = Reservation.new(params[:reservation])
         if reservation.save
           reservation.to_json
@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
         end
       end
 
-      patch "/reservations/:id" do
+    patch "/reservations/:id" do
         find_reservation
         if @reservation && @reservation.update(params[:reservation])
           reservation_to_json
@@ -33,7 +33,7 @@ class ReservationsController < ApplicationController
         end
       end
 
-      delete "/reservations/:id" do
+    delete "/reservations/:id" do
         find_reservation
         if @reservation&.destroy
           { messages: "Record successfully destroyed" }.to_json
@@ -41,6 +41,16 @@ class ReservationsController < ApplicationController
           { errors: "Record not found with id #{params[:id]}" }
         end
       end
+
+    private
+  
+    def find_reservation
+      @reservation = Reservation.find_by_id(params[:id])
+    end
+  
+    def reservation_to_json
+      @reservation.to_json
+    end
 
 
 

@@ -3,7 +3,7 @@ class GuestsController < ApplicationController
         Guest.all.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
       end
     
-      get "/guests/:id" do
+    get "/guests/:id" do
         find_guest
     
         if @guest
@@ -13,7 +13,7 @@ class GuestsController < ApplicationController
         end
       end
 
-      post "/guests" do
+    post "/guests" do
         guest = Guest.new(params[:guest])
         if guest.save
           guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
@@ -22,7 +22,7 @@ class GuestsController < ApplicationController
         end
       end
 
-      patch "/guests/:id" do
+    patch "/guests/:id" do
         find_guest
         if @guest && @guest.update(params[:guest])
           guest_to_json
@@ -33,7 +33,7 @@ class GuestsController < ApplicationController
         end
       end
 
-      delete "/guests/:id" do
+    delete "/guests/:id" do
         find_guest
     
         if @guest&.destroy
@@ -42,5 +42,15 @@ class GuestsController < ApplicationController
           { errors: "Record not found with id #{params[:id]}" }
         end
       end
+
+    private
+  
+    def find_guest
+      @guest = Guest.find_by_id(params[:id])
+    end
+  
+    def guest_to_json
+      @guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
+    end
 
 end
