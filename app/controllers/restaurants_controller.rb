@@ -13,4 +13,14 @@ class RestaurantsController < ApplicationController
         end
       end
 
+      post "/restaurants" do
+        restaurant = Restaurant.new(params[:restaurant])
+        if restaurant.save
+          restaurant.to_json
+        else
+          { errors: restaurant.errors.full_messages }.to_json
+        end
+      end
+      
+
 end

@@ -11,5 +11,10 @@ end
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
 
+# the "use" statements below allow the system to recognize the routes in each of the controllers below
+use RestaurantsController
+use GuestsController
+use ReservationsController
+
 # Our application
 run ApplicationController

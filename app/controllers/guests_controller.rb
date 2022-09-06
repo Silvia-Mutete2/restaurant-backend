@@ -13,4 +13,13 @@ class GuestsController < ApplicationController
         end
       end
 
+      post "/guests" do
+        guest = Guest.new(params[:guest])
+        if guest.save
+          guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
+        else
+          { errors: guest.errors.full_messages }.to_json
+        end
+      end
+
 end

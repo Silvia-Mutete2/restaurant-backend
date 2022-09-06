@@ -13,4 +13,15 @@ class ReservationsController < ApplicationController
         end
       end
 
+      post "/reservations" do
+        reservation = Reservation.new(params[:reservation])
+        if reservation.save
+          reservation.to_json
+        else
+          { errors: reservation.errors.full_messages }.to_json
+        end
+      end
+
+      
+
 end
