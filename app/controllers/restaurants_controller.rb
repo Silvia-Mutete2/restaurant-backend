@@ -21,6 +21,17 @@ class RestaurantsController < ApplicationController
           { errors: restaurant.errors.full_messages }.to_json
         end
       end
-      
+
+      patch "/restaurants/:id" do
+        find_restaurant
+        if @restaurant && @restaurant.update(params[:restaurant])
+          restaurant_to_json
+        elsif !@restaurant
+          { errors: "Record not found with id #{params[:id]}" }.to_json
+        else
+          { errors: @restaurant.errors.full_messages }.to_json
+        end
+      end
+
 
 end
