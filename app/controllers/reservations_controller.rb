@@ -33,6 +33,15 @@ class ReservationsController < ApplicationController
         end
       end
 
+      delete "/reservations/:id" do
+        find_reservation
+        if @reservation&.destroy
+          { messages: "Record successfully destroyed" }.to_json
+        else
+          { errors: "Record not found with id #{params[:id]}" }
+        end
+      end
+
 
 
 end

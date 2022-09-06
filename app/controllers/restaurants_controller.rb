@@ -33,5 +33,14 @@ class RestaurantsController < ApplicationController
         end
       end
 
+      delete "/restaurants/:id" do
+        find_restaurant
+        if @restaurant&.destroy
+          { messages: "Record successfully destroyed" }.to_json
+        else
+          { errors: "Record not found with id #{params[:id]}" }
+        end
+      end
+
 
 end
