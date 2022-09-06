@@ -33,4 +33,14 @@ class GuestsController < ApplicationController
         end
       end
 
+      delete "/guests/:id" do
+        find_guest
+    
+        if @guest&.destroy
+          { messages: "Record successfully destroyed" }.to_json
+        else
+          { errors: "Record not found with id #{params[:id]}" }
+        end
+      end
+
 end
