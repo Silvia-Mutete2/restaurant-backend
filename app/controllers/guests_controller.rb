@@ -22,4 +22,15 @@ class GuestsController < ApplicationController
         end
       end
 
+      patch "/guests/:id" do
+        find_guest
+        if @guest && @guest.update(params[:guest])
+          guest_to_json
+        elsif !@guest
+          { errors: "Record not found with id #{params[:id]}" }.to_json
+        else
+          { errors: @restaurant.errors.full_messages }.to_json
+        end
+      end
+
 end
