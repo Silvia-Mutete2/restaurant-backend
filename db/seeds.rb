@@ -18,7 +18,17 @@ images =["https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=
     "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=400",
     "https://images.pexels.com/photos/1698439/pexels-photo-1698439.jpeg?auto=compress&cs=tinysrgb&w=400",
     "https://images.pexels.com/photos/239975/pexels-photo-239975.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=400"
+    "https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/3714786/pexels-photo-3714786.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/236887/pexels-photo-236887.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/1249797/pexels-photo-1249797.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/937505/pexels-photo-937505.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/1055058/pexels-photo-1055058.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/5865152/pexels-photo-5865152.jpeg?auto=compress&cs=tinysrgb&w=400"
 
 
 ]
