@@ -22,6 +22,17 @@ class ReservationsController < ApplicationController
         end
       end
 
-      
+      patch "/reservations/:id" do
+        find_reservation
+        if @reservation && @reservation.update(params[:reservation])
+          reservation_to_json
+        elsif !@reservation
+          { errors: "Record not found with id #{params[:id]}" }.to_json
+        else
+          { errors: @reservation.errors.full_messages }.to_json
+        end
+      end
+
+
 
 end
