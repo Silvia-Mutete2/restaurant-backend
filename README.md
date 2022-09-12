@@ -5,12 +5,14 @@ This is the backend for a restaurant reservation app. The objective of this proj
 In your terminal clone the repo - git clone git@github.com:Silvia-Mutete2/restaurant-backend.git
 Then, run bundle install to install the gems.
 
-The app/controllers/application_controller.rb file has an example GET route handler. Replace this route with routes for your project.
-
 You can start your server with:
 
+```console
 $ bundle exec rake server
-This will run your server on port http://localhost:9292.
+```
+
+This will run your server on port
+[http://localhost:9292](http://localhost:9292).
 
 
 ## Live link
