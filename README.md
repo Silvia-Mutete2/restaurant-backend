@@ -14,9 +14,9 @@ This will run your server on port http://localhost:9292.
 
 
 ## Live link
-https://restaurant-backend2.herokuapp.com/reservations
-https://restaurant-backend2.herokuapp.com/guests
-https://restaurant-backend2.herokuapp.com/restaurants
+*https://restaurant-backend2.herokuapp.com/reservations
+*https://restaurant-backend2.herokuapp.com/guests
+*https://restaurant-backend2.herokuapp.com/restaurants
 
 ### License
 Copyright (c) 2022 Silvia Mutete
