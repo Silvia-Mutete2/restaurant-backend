@@ -1,6 +1,8 @@
 # restaurant-backend
 ## Overview
 This is the backend for a restaurant reservation app. The objective of this project is to showcase skills in Ruby and Active Record. You can create guests, log in, view available restaurants, create reservations, view your reservations, and edit the reservations.
+## Frontend
+https://github.com/Silvia-Mutete2/Restaurant
 ## Setup/Installation Requirements
 In your terminal clone the repo - git clone git@github.com:Silvia-Mutete2/restaurant-backend.git
 Then, run bundle install to install the gems.
